@@ -145,6 +145,7 @@ winget install Valve.Steam
 
 
 ## WSL / Install additional DEV tools
+```
 sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -154,4 +155,4 @@ sudo apt-get install \
     jq
 
 curl -sLS https://dl.get-arkade.dev | sudo sh
-
+```
