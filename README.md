@@ -120,6 +120,7 @@ Right click on the \\wsl$\Ubuntu folder and select "Map network drive..."
 
 
 ## Win / Install additional software
+```
 winget install 7Zip.7Zip
 winget install Google.Chrome
 winget install Google.BackupAndSync
@@ -128,5 +129,6 @@ winget install VideoLAN.VLC
 winget install Piriform.CCleaner
 winget install Notepad++.Notepad++
 winget install Valve.Steam
+```
 
 ## Win / Exclude certain folders from Windows Defender Scannig
