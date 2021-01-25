@@ -1,14 +1,17 @@
 # WINDOWS SUBSYSTEM FOR LINUX 2 as DEVELOPMENT MACHINE
 
-## Win 10 / Enable WSL and VMP
+## Win / Enable WSL and VMP
 
-PowerShell:
+PowerShell (elevated):
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+# Alternative: dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+# Alternative: dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-## Win 10 / Install Kernel Update
+## Win / Install Kernel Update
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 
