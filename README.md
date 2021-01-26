@@ -111,6 +111,9 @@ Add to ~/.bashrc
 source $HOME/.keychain/$HOSTNAME-sh
 ```
 
+If you have an existing key pair (ie: `id_rsa` and `id_rsa.pub`), drop it in `~/.ssh/`
+Otherwise you can generate a new one with `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+
 ## Win / Install Docker Desktop
 ```
 winget install Docker.DockerDesktop
