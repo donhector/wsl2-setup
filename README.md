@@ -1,6 +1,6 @@
 # WINDOWS 10 DEVELOPMENT MACHINE
 
-## Win / Enable WSL and VMP
+## Win / Enable WSL, VMP and Hyper-V (this one is not strictly needed)
 
 PowerShell (elevated):
 ```
@@ -9,6 +9,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 # Alternative: dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+# Alternative: dism.exe /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 ```
 
 ## Win / Install Kernel Update
@@ -63,11 +66,25 @@ See https://docs.microsoft.com/en-us/windows/wsl/wsl-config#wsl-2-settings for a
 
 
 ## Win / Install Windows Terminal
+
+Using Winget
 ```
 winget install Microsoft.WindowsTerminal
 ```
 
+Using Chocolatey
+```
+choco install microsoft-windows-terminal --pre 
+```
+
 ## Win / Optional: Install X11 server
+
+Using Chocolatey
+```
+choco install vcxsrv
+```
+
+Using Winget
 ```
 winget install marha.VcXsrv
 ```
