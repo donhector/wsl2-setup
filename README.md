@@ -33,6 +33,13 @@ https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1?activetab=pivot:ove
 ```
 
 ## Win / Install Linux distro
+
+Using Chocolatey
+```
+choco install wsl-ubuntu-2004
+```
+
+Using Winget
 ```
 winget install Canonical.Ubuntu
 ```
