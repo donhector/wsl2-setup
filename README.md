@@ -1,4 +1,4 @@
-# WINDOWS SUBSYSTEM FOR LINUX 2 as DEVELOPMENT MACHINE
+# WINDOWS 10 DEVELOPMENT MACHINE
 
 ## Win / Enable WSL and VMP
 
@@ -19,6 +19,12 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 PowerShell:
 ```
 wsl --set-default-version 2
+```
+
+## Win / Install Chocolatey
+In a Powershell console with Administrative permissions:
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
 ## Win / Install Windows Package Manager (winget)
@@ -77,6 +83,11 @@ echo "$USER  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/$USER
 wsl bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
 
+Set the theme:
+
+sed -i 's/OSH_THEME=.*/OSH_THEME="powerline"/g' ~/.bashrc
+
+
 ## WSL / Optional: Prepare for X11 on Windows
 Add to `~/.bashrc` (provide IP of your Windows host):
 ```
@@ -114,6 +125,25 @@ source $HOME/.keychain/$HOSTNAME-sh
 If you have an existing key pair (ie: `id_rsa` and `id_rsa.pub`), drop it in `~/.ssh/`
 Otherwise you can generate a new one with `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 
+
+## WSL / Fuzzy Finder
+
+Install
+```
+sudo apt install fzf
+```
+Add to ~/.bashrc
+```
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+export FZF_DEFAULT_OPTS="--color=dark"
+source /usr/share/doc/fzf/examples/key-bindings.bash
+source /usr/share/doc/fzf/examples/completion.bash
+```
+
+To activate terminal search do `Ctrl+t`
+To activate Reverse search powered by fzf just do `Ctrl+r`
+
+
 ## Win / Install Docker Desktop
 ```
 winget install Docker.DockerDesktop
@@ -133,6 +163,23 @@ docker run hello-world
 
 Right click on the \\wsl$\Ubuntu folder and select "Map network drive..."
 
+## Win / Install Vscode
+```
+winget install Microsoft.VisualStudioCode
+```
+
+Install extensions:
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension golang.go
+code --install-extension ms-python.python
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension pkief.material-icon-theme
+code --install-extension redhat.vscode-yaml
+code --install-extension zhuangtongfa.material-theme
+code --install-extension davidanson.vscode-markdownlint
+code --install-extension coenraads.bracket-pair-colorizer-2
+code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 
 ## Win / Install additional software
 ```
@@ -162,3 +209,14 @@ sudo apt-get install \
 
 curl -sLS https://dl.get-arkade.dev | sudo sh
 ```
+
+## Win / Install DexPot
+This is Virtual Desktop Manager, with more features than the one built into Winodws 10
+
+https://dexpot.de/?id=download
+
+To switch desktops:
+`alt+<num>`
+
+To move active window to a specific desktop:
+`alt+shift+<num>`
