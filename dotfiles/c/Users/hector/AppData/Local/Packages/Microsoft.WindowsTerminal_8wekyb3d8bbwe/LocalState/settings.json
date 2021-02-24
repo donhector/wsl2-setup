@@ -8,7 +8,7 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "defaultProfile": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
 
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
@@ -28,6 +28,11 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
+            "cursorShape": "filledBox",
+            "useAcrylic": true,
+            "acrylicOpacity": 0.8,
+            "colorScheme": "MaterialOcean",
+            "fontFace": "Cascadia Code"
         },
         "list":
         [
@@ -46,26 +51,109 @@
                 "hidden": false
             },
             {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl",
-                "commandline": "wsl.exe ~",
-                "useAcrylic": true,
-                "acrylicOpacity": 0.8
-            },
-            {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl",
+                "commandline": "wsl.exe ~"
             }
         ]
     },
 
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-    "schemes": [],
+    "schemes": [
+        {
+            "name": "MaterialOcean",
+            "black": "#546e7a",
+            "red": "#ff5370",
+            "green": "#c3e88d",
+            "yellow": "#ffcb6b",
+            "blue": "#82aaff",
+            "purple": "#c792ea",
+            "cyan": "#89ddff",
+            "white": "#ffffff",
+            "brightBlack": "#546e7a",
+            "brightRed": "#ff5370",
+            "brightGreen": "#c3e88d",
+            "brightYellow": "#ffcb6b",
+            "brightBlue": "#82aaff",
+            "brightPurple": "#c792ea",
+            "brightCyan": "#89ddff",
+            "brightWhite": "#ffffff",
+            "background": "#0f111a",
+            "foreground": "#8f93a2"
+          },
+          {
+            "name": "Mathias",
+            "black": "#000000",
+            "red": "#e52222",
+            "green": "#a6e32d",
+            "yellow": "#fc951e",
+            "blue": "#c48dff",
+            "purple": "#fa2573",
+            "cyan": "#67d9f0",
+            "white": "#f2f2f2",
+            "brightBlack": "#555555",
+            "brightRed": "#ff5555",
+            "brightGreen": "#55ff55",
+            "brightYellow": "#ffff55",
+            "brightBlue": "#5555ff",
+            "brightPurple": "#ff55ff",
+            "brightCyan": "#55ffff",
+            "brightWhite": "#ffffff",
+            "background": "#000000",
+            "foreground": "#bbbbbb"
+          },
+          {
+            "name": "Molokai",
+            "black": "#121212",
+            "red": "#fa2573",
+            "green": "#98e123",
+            "yellow": "#dfd460",
+            "blue": "#1080d0",
+            "purple": "#8700ff",
+            "cyan": "#43a8d0",
+            "white": "#bbbbbb",
+            "brightBlack": "#555555",
+            "brightRed": "#f6669d",
+            "brightGreen": "#b1e05f",
+            "brightYellow": "#fff26d",
+            "brightBlue": "#00afff",
+            "brightPurple": "#af87ff",
+            "brightCyan": "#51ceff",
+            "brightWhite": "#ffffff",
+            "background": "#121212",
+            "foreground": "#bbbbbb"
+          },
+          {
+            "name": "Monokai Remastered",
+            "black": "#1a1a1a",
+            "red": "#f4005f",
+            "green": "#98e024",
+            "yellow": "#fd971f",
+            "blue": "#9d65ff",
+            "purple": "#f4005f",
+            "cyan": "#58d1eb",
+            "white": "#c4c5b5",
+            "brightBlack": "#625e4c",
+            "brightRed": "#f4005f",
+            "brightGreen": "#98e024",
+            "brightYellow": "#e0d561",
+            "brightBlue": "#9d65ff",
+            "brightPurple": "#f4005f",
+            "brightCyan": "#58d1eb",
+            "brightWhite": "#f6f6ef",
+            "background": "#0c0c0c",
+            "foreground": "#d9d9d9"
+          }
+    ],
 
     // Add custom actions and keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
