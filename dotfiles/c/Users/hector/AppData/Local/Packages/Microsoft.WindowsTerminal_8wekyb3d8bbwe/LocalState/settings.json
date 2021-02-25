@@ -32,7 +32,8 @@
             "useAcrylic": true,
             "acrylicOpacity": 0.8,
             "colorScheme": "MaterialOcean",
-            "fontFace": "Cascadia Code"
+            "fontFace": "Cascadia Code",
+            "fontSize": 10
         },
         "list":
         [
@@ -52,7 +53,7 @@
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
             },
@@ -89,6 +90,27 @@
             "brightWhite": "#ffffff",
             "background": "#0f111a",
             "foreground": "#8f93a2"
+          },
+          {
+            "name": "Material",
+            "background": "#1E282C",
+            "black": "#073641",
+            "blue": "#80CBC3",
+            "brightBlack": "#002B36",
+            "brightBlue": "#7DC6BF",
+            "brightCyan": "#34434D",
+            "brightGreen": "#C3E88D",
+            "brightPurple": "#6C71C3",
+            "brightRed": "#EB606B",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F7EB95",
+            "cyan": "#AEDDFF",
+            "foreground": "#C3C7D1",
+            "green": "#C3E88D",
+            "purple": "#FF2490",
+            "red": "#EB606B",
+            "white": "#FFFFFF",
+            "yellow": "#F7EB95"
           },
           {
             "name": "Mathias",
